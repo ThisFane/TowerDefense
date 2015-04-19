@@ -16,13 +16,14 @@ public class EnemyCreator : MonoBehaviour
 	{
 		if(Input.GetKeyDown(KeyCode.P))
 		{
-			createEnemy(10, 3, 5);
+			createEnemy(Random.Range(0, 10), Random.Range(0, 10), 10, 3, 5);
 		}
 	}
 
-	void createEnemy(int h, int a, int s)
+	void createEnemy(int posX, int posY, int h, int a, int s)
 	{
-		enemy = Instantiate(enemyFab, new Vector3(6f,5f,0f), Quaternion.identity) as GameObject;
+		enemy = Instantiate(enemyFab, new Vector3(posX, posY,0f), Quaternion.identity) as GameObject;
 		enemy.GetComponent<Enemy>().setVar(h, a, s);
 	}
+
 }
