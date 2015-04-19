@@ -10,6 +10,7 @@ public class Unit : MonoBehaviour {
 	// animations, we are going to be somewhere in between tiles.
 	public int tileX;
 	public int tileY;
+	public bool pc=false;
 
 	public TileMap map;
 
